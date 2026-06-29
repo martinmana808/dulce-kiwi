@@ -29,7 +29,7 @@ function Polaroid({ bake, i }: { bake: Bake; i: number }) {
             className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
           />
         </div>
-        <figcaption className="px-1 pt-3 text-center font-display text-lg italic leading-snug text-bark">
+        <figcaption className="px-1 pt-2 text-center font-hand text-2xl leading-tight text-bark">
           {bake.caption}
         </figcaption>
       </figure>
@@ -54,7 +54,7 @@ export default function Reposteria() {
           <p className="text-sm uppercase tracking-[0.34em] text-[#fff6e4]/85">
             Del horno a tu mesa
           </p>
-          <h2 className="mt-3 font-display text-5xl text-cream drop-shadow-[0_2px_6px_rgba(50,32,8,0.45)] md:text-6xl">
+          <h2 className="mt-2 font-hand text-6xl text-cream drop-shadow-[0_2px_6px_rgba(50,32,8,0.5)] md:text-7xl">
             Repostería
           </h2>
           <Flourish className="mx-auto mt-3 h-3.5 w-32 text-[#fff6e4]/80" />

@@ -34,12 +34,12 @@ function Frame({
           ) : (
             <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-bark/40">
               <Sprig className="w-24 text-[#7a5a30]/45" />
-              <span className="font-display text-base italic">Foto pronto</span>
+              <span className="font-hand text-xl">Foto pronto</span>
             </div>
           )}
         </div>
         <figcaption className="pt-3 text-center">
-          <span className="font-display text-xl text-forest">{year}</span>
+          <span className="font-hand text-3xl text-forest">{year}</span>
           <span className="mx-auto mt-1 block max-w-[15rem] text-sm leading-snug text-bark/75">
             {caption}
           </span>
@@ -53,7 +53,7 @@ export default function SobreMi() {
   return (
     <section
       id="sobre-mi"
-      className="paper-grain relative bg-cream py-28"
+      className="paper-grain relative bg-gradient-to-b from-linen via-cream to-cream-deep py-28"
     >
       <TornEdge color="#f4efe6" variant="a" />
       <Sprig className="pointer-events-none absolute right-6 top-12 hidden w-40 -scale-x-100 text-forest/15 md:block" />
@@ -75,7 +75,7 @@ export default function SobreMi() {
                   className="object-cover"
                 />
               </div>
-              <figcaption className="absolute inset-x-0 bottom-5 text-center font-display text-lg italic text-bark">
+              <figcaption className="absolute inset-x-0 bottom-4 text-center font-hand text-2xl text-bark">
                 Ellie · Acassuso
               </figcaption>
             </div>
@@ -83,7 +83,7 @@ export default function SobreMi() {
 
           <Reveal delay={0.1}>
             <p className="text-sm uppercase tracking-[0.34em] text-clay">Sobre mí</p>
-            <h2 className="mt-2 font-display text-5xl text-forest md:text-6xl">
+            <h2 className="mt-1 font-hand text-6xl text-forest md:text-7xl">
               Hola, soy Ellie
             </h2>
             <Flourish className="mt-3 h-3.5 w-32 text-clay/70" />
@@ -95,7 +95,7 @@ export default function SobreMi() {
               <p>
                 Hace poco crucé el mundo hasta Argentina y me enamoré del mate,
                 los bizcochitos y la vida tranquila de Acassuso. De ahí nació{" "}
-                <span className="font-display italic text-forest">Dulce Kiwi</span>
+                <span className="font-hand text-[1.35em] leading-none text-forest">Dulce Kiwi</span>
                 : las ganas de compartir lo que más me gusta.
               </p>
               <p>

@@ -50,15 +50,25 @@ export default function Hero() {
         aria-hidden
         style={{
           background:
-            "linear-gradient(180deg, rgba(247,240,224,0.66) 0%, rgba(247,240,224,0.18) 22%, rgba(247,240,224,0) 45%, rgba(60,45,28,0.10) 82%, rgba(52,40,25,0.34) 100%)",
+            "linear-gradient(180deg, rgba(244,226,188,0.72) 0%, rgba(244,226,188,0.22) 22%, rgba(244,226,188,0) 45%, rgba(60,45,28,0.10) 82%, rgba(52,40,25,0.34) 100%)",
         }}
       />
+      {/* warm golden glow cradling the wordmark */}
       <div
         className="absolute inset-x-0 top-0 h-[62%]"
         aria-hidden
         style={{
           background:
-            "radial-gradient(50% 60% at 50% 42%, rgba(247,240,224,0.62) 0%, rgba(247,240,224,0) 70%)",
+            "radial-gradient(52% 62% at 50% 40%, rgba(248,230,190,0.68) 0%, rgba(248,230,190,0) 70%)",
+        }}
+      />
+      {/* soft sun flare from the top-left, Woodland-style */}
+      <div
+        className="absolute inset-0"
+        aria-hidden
+        style={{
+          background:
+            "radial-gradient(40% 45% at 8% 4%, rgba(255,238,196,0.6) 0%, rgba(255,238,196,0) 60%)",
         }}
       />
 
@@ -107,10 +117,10 @@ export default function Hero() {
           priority
           className="w-60 drop-shadow-[0_5px_16px_rgba(60,45,25,0.22)] md:w-72"
         />
-        <p className="mt-6 max-w-md font-display text-xl italic text-forest drop-shadow-[0_1px_8px_rgba(247,240,224,0.7)] md:text-2xl">
+        <p className="mt-5 max-w-md font-hand text-4xl leading-[1.05] text-forest drop-shadow-[0_1px_9px_rgba(247,240,224,0.85)] md:text-5xl">
           Repostería casera, natural y de la tierra.
         </p>
-        <p className="mt-2 text-sm uppercase tracking-[0.28em] text-bark drop-shadow-[0_1px_6px_rgba(247,240,224,0.6)]">
+        <p className="mt-3 text-sm uppercase tracking-[0.28em] text-bark drop-shadow-[0_1px_6px_rgba(247,240,224,0.6)]">
           Acassuso · Buenos Aires
         </p>
       </motion.div>
@@ -118,7 +128,7 @@ export default function Hero() {
       {/* scroll cue */}
       <motion.div
         style={{ opacity: contentFade }}
-        className="absolute bottom-[38vh] left-1/2 z-10 -translate-x-1/2 text-forest/80"
+        className="absolute bottom-[20vh] left-1/2 z-10 -translate-x-1/2 text-forest/80"
         aria-hidden
       >
         <div className="flex flex-col items-center gap-1 text-xs uppercase tracking-[0.25em] drop-shadow-[0_1px_5px_rgba(247,240,224,0.8)]">

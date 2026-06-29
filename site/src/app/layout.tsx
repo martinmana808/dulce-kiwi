@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Jost } from "next/font/google";
+import { Fraunces, Jost, Caveat } from "next/font/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -11,6 +11,14 @@ const fraunces = Fraunces({
 const jost = Jost({
   subsets: ["latin"],
   variable: "--font-jost",
+  display: "swap",
+});
+
+// Hand-lettered brush feel for headlines — the Woodland personality
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-caveat",
   display: "swap",
 });
 
@@ -30,7 +38,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" className={`${fraunces.variable} ${jost.variable}`}>
+    <html
+      lang="es"
+      className={`${fraunces.variable} ${jost.variable} ${caveat.variable}`}
+    >
       <body className="bg-cream text-forest antialiased">{children}</body>
     </html>
   );

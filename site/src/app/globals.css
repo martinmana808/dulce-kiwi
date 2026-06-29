@@ -1,20 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — earthy, woody, natural */
+  /* Brand palette — earthy, woody, natural. Warm, sun-baked, not stark white. */
   --color-forest: #34503f;
   --color-forest-soft: #4a6a55;
-  --color-cream: #f4efe6;
-  --color-cream-deep: #ece3d4;
+  --color-cream: #f3e8d4;
+  --color-cream-deep: #e9dabf;
+  --color-sand: #e7d3ac;
+  --color-linen: #efe2c9;
   --color-kraft: #cdb791;
   --color-kraft-deep: #b89e74;
   --color-bark: #5c4733;
   --color-clay: #c08457;
-  --color-sky: #f3ead8;
+  --color-sky: #f1e5cf;
   --color-hill: #8fa37e;
   --color-hill-deep: #6e8466;
 
   --font-display: var(--font-fraunces);
+  --font-hand: var(--font-caveat);
   --font-sans: var(--font-jost);
 }
 
@@ -30,12 +33,19 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+/* Hand-lettered brush headlines — warm, joyful, rustic (the Woodland feel) */
 h1,
 h2,
 h3,
 h4,
-.font-display {
-  font-family: var(--font-display), Georgia, serif;
+.font-hand {
+  font-family: var(--font-hand), "Comic Sans MS", cursive;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 /* Warm cork board for the Repostería section — muted, fine-speckled, natural */
@@ -97,11 +107,11 @@ h4,
 
 /* Drop cap for editorial paragraphs */
 .dropcap::first-letter {
-  font-family: var(--font-display), Georgia, serif;
-  font-weight: 600;
-  font-size: 3em;
-  line-height: 0.72;
+  font-family: var(--font-hand), cursive;
+  font-weight: 700;
+  font-size: 3.4em;
+  line-height: 0.7;
   float: left;
-  padding: 0.06em 0.09em 0 0;
+  padding: 0.1em 0.12em 0 0;
   color: var(--color-clay);
 }
