@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="340" height="340">
+  <rect width="340" height="340" fill="#F4EFE6"/>
+  <g fill="#34503f">
+    <!-- body: hunched teardrop, high back (left), low head (right) -->
+    <path d="M196,150
+             C200,112 182,74 132,68
+             C86,62 48,96 46,150
+             C44,198 82,240 138,240
+             C176,240 196,206 198,170 Z"/>
+    <!-- beak: long, slender, down-curved -->
+    <path d="M190,146
+             C226,148 264,166 304,200
+             C276,184 236,166 190,162 Z"/>
+    <!-- legs -->
+    <path d="M120,232 L120,266" stroke="#34503f" stroke-width="8" stroke-linecap="round"/>
+    <path d="M156,232 L156,266" stroke="#34503f" stroke-width="8" stroke-linecap="round"/>
+    <g stroke="#34503f" stroke-width="5" stroke-linecap="round" fill="none">
+      <path d="M120,266 L109,278 M120,266 L120,280 M120,266 L131,278"/>
+      <path d="M156,266 L145,278 M156,266 L156,280 M156,266 L167,278"/>
+    </g>
+  </g>
+  <circle cx="158" cy="126" r="6" fill="#F4EFE6"/>
+</svg>
