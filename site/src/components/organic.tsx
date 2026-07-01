@@ -23,7 +23,7 @@ export function TornEdge({
   return (
     <div
       aria-hidden
-      className={`pointer-events-none absolute inset-x-0 top-0 z-[2] -translate-y-[98%] ${className}`}
+      className={`pointer-events-none absolute inset-x-0 top-0 z-[2] -translate-y-[98%] hidden ${className}`}
     >
       <svg
         viewBox="0 0 1200 44"
@@ -31,6 +31,38 @@ export function TornEdge({
         className="block h-6 w-full md:h-10"
       >
         <path d={TORN[variant]} fill={color} />
+      </svg>
+    </div>
+  );
+}
+
+/**
+ * A smooth, gentle wave that sits at the top of a section and laps up over the
+ * one above it — softening an otherwise hard edge. `color` should be the
+ * section's own background colour (use its darker, top-vignette tone so it
+ * blends into the section body). Mirror of the wavy divider used lower down.
+ */
+export function WaveEdge({
+  color,
+  className = "",
+}: {
+  color: string;
+  className?: string;
+}) {
+  return (
+    <div
+      aria-hidden
+      className={`pointer-events-none absolute inset-x-0 top-0 z-[2] -translate-y-[98%] ${className}`}
+    >
+      <svg
+        viewBox="0 0 1200 60"
+        preserveAspectRatio="none"
+        className="block h-9 w-full md:h-14"
+      >
+        <path
+          d="M0 60 L0 34 C 110 34 165 12 285 16 C 405 20 470 44 600 40 C 725 36 805 10 945 16 C 1065 21 1120 40 1200 33 L1200 60 Z"
+          fill={color}
+        />
       </svg>
     </div>
   );

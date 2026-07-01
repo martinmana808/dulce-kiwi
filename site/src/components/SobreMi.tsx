@@ -3,8 +3,8 @@ import Reveal from "./Reveal";
 import { TornEdge, Sprig, Flourish } from "./organic";
 
 const TIMELINE = [
-  { year: "Bebé", caption: "La primera probada — siempre fui golosa.", src: null, rotate: "-3deg" },
-  { year: "7 años", caption: "Mis primeras galletas, hechas en casa.", src: null, rotate: "2.5deg" },
+  { year: "3 años", caption: "Galleta en mano, en la granja de Kumeu.", src: "/photos/ellie-farm.jpg", rotate: "-3deg" },
+  { year: "8 años", caption: "Mis primeros muffins, hechos en casa.", src: "/photos/ellie-baking.jpg", rotate: "2.5deg" },
   { year: "Hoy", caption: "Mate y bizcochitos en Acassuso.", src: "/photos/ellie.png", rotate: "-2deg" },
 ];
 
@@ -82,13 +82,13 @@ export default function SobreMi() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <p className="text-sm uppercase tracking-[0.34em] text-clay">Sobre mí</p>
-            <h2 className="mt-1 font-hand text-6xl text-forest md:text-7xl">
+            <p className="text-xs uppercase tracking-[0.34em] text-clay">Sobre mí</p>
+            <h2 className="mt-4 font-hand text-6xl text-forest md:text-7xl">
               Hola, soy Ellie
             </h2>
             <Flourish className="mt-3 h-3.5 w-32 text-clay/70" />
             <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-bark">
-              <p className="dropcap">
+              <p>
                 Nací en Nueva Zelanda y crecí entre hornos calientes, manteca y
                 harina. Hornear siempre fue mi forma de cuidar a los demás.
               </p>
@@ -108,7 +108,7 @@ export default function SobreMi() {
         </div>
 
         <Reveal className="mt-24 text-center">
-          <p className="text-sm uppercase tracking-[0.34em] text-clay">Mi historia</p>
+          <p className="text-xs uppercase tracking-[0.34em] text-clay">Mi historia</p>
           <Flourish className="mx-auto mt-3 h-3.5 w-28 text-clay/70" />
         </Reveal>
 

@@ -58,10 +58,10 @@ export default function Contacto() {
             height={100}
             className="mx-auto w-20 opacity-90 [filter:brightness(0)_saturate(100%)_invert(94%)_sepia(8%)_saturate(220%)_hue-rotate(345deg)_brightness(101%)]"
           />
-          <p className="mt-6 text-sm uppercase tracking-[0.34em] text-kraft">
+          <p className="mt-6 text-xs uppercase tracking-[0.34em] text-kraft">
             ¿Se te antojó algo?
           </p>
-          <h2 className="mt-1 font-hand text-6xl md:text-7xl">Hablemos</h2>
+          <h2 className="mt-2 font-hand text-6xl md:text-7xl">Hablemos</h2>
           <Flourish className="mx-auto mt-3 h-3.5 w-32 text-kraft/70" />
           <p className="mx-auto mt-5 max-w-lg text-cream/80">
             Encargos por la semana. Escribime y armamos algo rico, hecho a mano
@@ -113,6 +113,12 @@ export default function Contacto() {
           cariño
         </p>
       </footer>
+      <img
+              src="/dividers/mask-top-slider.png"
+              alt=""
+              aria-hidden
+              className="section-divider top"
+            />
     </section>
   );
 }

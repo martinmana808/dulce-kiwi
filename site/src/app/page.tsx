@@ -10,7 +10,14 @@ export default function Home() {
       <Nav />
       <Hero />
       <Reposteria />
+      
       <SobreMi />
+      <img
+        src="/dividers/mask-top-slider.png"
+        alt=""
+        aria-hidden
+        className="section-divider"
+      />
       <Contacto />
     </main>
   );

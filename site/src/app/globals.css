@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+body{
+  font-weight: 500;
+}
 @theme {
   /* Brand palette — earthy, woody, natural. Warm, sun-baked, not stark white. */
   --color-forest: #34503f;
@@ -18,7 +20,7 @@
 
   --font-display: var(--font-fraunces);
   --font-hand: var(--font-caveat);
-  --font-sans: var(--font-jost);
+  --font-sans: var(--font-google-sans);
 }
 
 :root {
@@ -27,14 +29,16 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
 
 body {
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-google-sans), system-ui, sans-serif;
 }
 
 .font-display {
   font-family: var(--font-display), Georgia, serif;
+  
 }
 
 /* Hand-lettered brush headlines — warm, joyful, rustic (the Woodland feel) */
@@ -48,21 +52,46 @@ h4,
   letter-spacing: 0.01em;
 }
 
-/* Warm cork board for the Repostería section — muted, fine-speckled, natural */
+/* Warm cork board for the Repostería section — real seamless cork photo,
+   with a soft top-light + edge vignette so the cream text stays legible */
 .cork {
-  background-color: #b1894f;
+  background-color: #9c6f3d;
   background-image:
-    radial-gradient(rgba(64, 42, 16, 0.30) 0.8px, transparent 1.1px),
-    radial-gradient(rgba(108, 76, 36, 0.26) 0.7px, transparent 1px),
-    radial-gradient(rgba(46, 30, 12, 0.22) 0.6px, transparent 0.9px),
-    radial-gradient(rgba(176, 138, 86, 0.30) 0.7px, transparent 1px),
     radial-gradient(
-      120% 120% at 50% 0%,
-      rgba(70, 46, 18, 0) 55%,
-      rgba(70, 46, 18, 0.28) 100%
-    );
-  background-size: 7px 7px, 11px 11px, 5px 5px, 9px 9px, 100% 100%;
-  background-position: 0 0, 4px 3px, 2px 5px, 6px 1px, 0 0;
+      130% 120% at 50% 0%,
+      rgba(48, 30, 10, 0.42) 0%,
+      rgba(48, 30, 10, 0.12) 45%,
+      rgba(48, 30, 10, 0.34) 100%
+    ),
+    url("/textures/cork.webp");
+  background-repeat: no-repeat, repeat;
+  background-size: 100% 100%, 340px 340px;
+  background-position: 0 0, 0 0;
+}
+
+/* Wavy mask that bridges the cork Repostería into the Sobre-mí section.
+   Sits flush on top of Sobre-mí and laps up over the cork above it. */
+.section-divider {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+.section-divider.bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  transform: scaleY(-1);
+}
+.section-divider.top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
 }
 
 /* Real paper-fibre grain (subtle organic noise) */

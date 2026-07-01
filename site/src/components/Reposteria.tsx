@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
-import { TornEdge, Sprig, Flourish } from "./organic";
+import { WaveEdge, Sprig, Flourish } from "./organic";
 
 type Bake = { src: string; caption: string; rotate: string; lift: string };
 
@@ -43,7 +43,8 @@ export default function Reposteria() {
       id="reposteria"
       className="cork paper-grain relative pb-28 pt-24"
     >
-      <TornEdge color="#b1894f" variant="b" />
+      {/* cork waves up into the hero, softening the hard edge */}
+      <WaveEdge color="#5f4222" />
 
       {/* botanical accents */}
       <Sprig className="pointer-events-none absolute left-4 top-16 hidden w-44 text-[#3f5a47]/35 md:block" />
@@ -51,14 +52,14 @@ export default function Reposteria() {
 
       <div className="relative mx-auto max-w-6xl px-6">
         <Reveal className="text-center">
-          <p className="text-sm uppercase tracking-[0.34em] text-[#fff6e4]/85">
+          <p className="text-xs uppercase tracking-[0.34em] text-[#fff6e4]/85">
             Del horno a tu mesa
           </p>
-          <h2 className="mt-2 font-hand text-6xl text-cream drop-shadow-[0_2px_6px_rgba(50,32,8,0.5)] md:text-7xl">
+          <h2 className="mt-4 font-hand text-6xl text-cream drop-shadow-[0_2px_6px_rgba(50,32,8,0.5)] md:text-7xl">
             Repostería
           </h2>
           <Flourish className="mx-auto mt-3 h-3.5 w-32 text-[#fff6e4]/80" />
-          <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-cream/90">
+          <p className="mx-auto mt-5 max-w-xl text-[18px] leading-relaxed text-cream/90">
             Todo hecho a mano, con frutos secos, dátiles, banana, zanahoria y
             harinas integrales. Nada refinado — la buena de siempre.
           </p>
@@ -70,6 +71,12 @@ export default function Reposteria() {
           ))}
         </div>
       </div>
+      <img
+              src="/dividers/mask-top-slider.png"
+              alt=""
+              aria-hidden
+              className="section-divider bottom"
+            />
     </section>
   );
 }
