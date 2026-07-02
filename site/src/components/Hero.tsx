@@ -81,7 +81,7 @@ export default function Hero() {
       {/* Centerpiece: logo + tagline, sitting up over the brick wall */}
       <motion.div
         style={{ y: yContent, opacity: contentFade }}
-        className="relative justify-center  mx-auto flex h-[100svh] max-w-3xl flex-col items-center px-6 pt-[5vh] text-center"
+        className="relative z-[10] justify-center  mx-auto flex h-[100svh] max-w-3xl flex-col items-center px-6 pt-[5vh] text-center"
       >
         <Image
           src="/brand/logo.svg"

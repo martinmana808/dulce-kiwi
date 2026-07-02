@@ -17,7 +17,7 @@ function Polaroid({ bake, i }: { bake: Bake; i: number }) {
   return (
     <Reveal delay={i * 0.06} className="shrink-0 snap-center">
       <figure
-        className="group relative w-[80vw] max-w-[26rem] rounded-[4px] bg-[#fbf8f1] p-4 pb-5 shadow-[0_20px_46px_rgba(40,26,8,0.42)] transition-transform duration-300 hover:z-10 hover:!rotate-0 hover:scale-[1.02] sm:w-[24rem] lg:w-[27rem]"
+        className="group relative w-[64vw] max-w-[20.8rem] rounded-[4px] bg-[#fbf8f1] p-4 pb-5 shadow-[0_20px_46px_rgba(40,26,8,0.42)] transition-transform duration-300 hover:z-10 hover:!rotate-0 hover:scale-[1.02] sm:w-[19.2rem] lg:w-[21.6rem]"
         style={{ rotate: bake.rotate }}
       >
         <span className="tape absolute -top-4 left-1/2 h-8 w-28 -translate-x-1/2 -rotate-2 rounded-[1px]" />
@@ -26,7 +26,7 @@ function Polaroid({ bake, i }: { bake: Bake; i: number }) {
             src={bake.src}
             alt={bake.caption}
             fill
-            sizes="(max-width: 640px) 80vw, 27rem"
+            sizes="(max-width: 640px) 64vw, 21.6rem"
             className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
           />
         </div>
