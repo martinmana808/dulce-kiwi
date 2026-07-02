@@ -53,7 +53,7 @@ export default function SobreMi() {
   return (
     <section
       id="sobre-mi"
-      className="paper-grain relative bg-gradient-to-b from-linen via-cream to-cream-deep py-28"
+      className="paper-grain relative bg-gradient-to-b from-linen via-cream to-cream-deep py-42"
     >
       <TornEdge color="#f4efe6" variant="a" />
       <Sprig className="pointer-events-none absolute right-6 top-12 hidden w-40 -scale-x-100 text-forest/15 md:block" />

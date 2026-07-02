@@ -52,7 +52,7 @@ export function WaveEdge({
   return (
     <div
       aria-hidden
-      className={`pointer-events-none absolute inset-x-0 top-0 z-[2] -translate-y-[98%] ${className}`}
+      className={`hidden pointer-events-none absolute inset-x-0 top-0 z-[2] -translate-y-[98%] ${className}`}
     >
       <svg
         viewBox="0 0 1200 60"

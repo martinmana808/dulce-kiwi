@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
-import { WaveEdge, Sprig, Flourish } from "./organic";
+import { Sprig, Flourish } from "./organic";
+import DragScroller from "./DragScroller";
 
 type Bake = { src: string; caption: string; rotate: string; lift: string };
 
@@ -14,22 +15,22 @@ const BAKES: Bake[] = [
 
 function Polaroid({ bake, i }: { bake: Bake; i: number }) {
   return (
-    <Reveal delay={i * 0.07}>
+    <Reveal delay={i * 0.06} className="shrink-0 snap-center">
       <figure
-        className="group relative w-[15rem] rounded-[3px] bg-[#fbf8f1] p-3 pb-4 shadow-[0_14px_30px_rgba(40,26,8,0.34)] transition-transform duration-300 hover:z-10 hover:!rotate-0 hover:scale-[1.04] sm:w-[16.5rem]"
-        style={{ rotate: bake.rotate, marginTop: bake.lift }}
+        className="group relative w-[80vw] max-w-[26rem] rounded-[4px] bg-[#fbf8f1] p-4 pb-5 shadow-[0_20px_46px_rgba(40,26,8,0.42)] transition-transform duration-300 hover:z-10 hover:!rotate-0 hover:scale-[1.02] sm:w-[24rem] lg:w-[27rem]"
+        style={{ rotate: bake.rotate }}
       >
-        <span className="tape absolute -top-3.5 left-1/2 h-7 w-24 -translate-x-1/2 -rotate-2 rounded-[1px]" />
-        <div className="relative aspect-square w-full overflow-hidden rounded-[2px] bg-kraft/40">
+        <span className="tape absolute -top-4 left-1/2 h-8 w-28 -translate-x-1/2 -rotate-2 rounded-[1px]" />
+        <div className="relative aspect-square w-full overflow-hidden rounded-[3px] bg-kraft/40">
           <Image
             src={bake.src}
             alt={bake.caption}
             fill
-            sizes="(max-width: 640px) 60vw, 17rem"
+            sizes="(max-width: 640px) 80vw, 27rem"
             className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
           />
         </div>
-        <figcaption className="px-1 pt-2 text-center font-hand text-2xl leading-tight text-bark">
+        <figcaption className="px-1 pt-3 text-center font-hand text-3xl leading-tight text-bark">
           {bake.caption}
         </figcaption>
       </figure>
@@ -41,11 +42,8 @@ export default function Reposteria() {
   return (
     <section
       id="reposteria"
-      className="cork paper-grain relative pb-28 pt-24"
+      className="cork cork-wavy-top paper-grain relative z-[20] -mt-14 pb-42 pt-42 z-20"
     >
-      {/* cork waves up into the hero, softening the hard edge */}
-      <WaveEdge color="#5f4222" />
-
       {/* botanical accents */}
       <Sprig className="pointer-events-none absolute left-4 top-16 hidden w-44 text-[#3f5a47]/35 md:block" />
       <Sprig className="pointer-events-none absolute right-4 bottom-12 hidden w-40 -scale-x-100 text-[#3f5a47]/30 md:block" />
@@ -65,12 +63,15 @@ export default function Reposteria() {
           </p>
         </Reveal>
 
-        <div className="mt-16 flex flex-wrap items-start justify-center gap-x-10 gap-y-10">
-          {BAKES.map((b, i) => (
-            <Polaroid key={b.src} bake={b} i={i} />
-          ))}
-        </div>
       </div>
+
+      {/* Full-bleed horizontal gallery — scroll sideways, cards snap to centre.
+          Scrollbar hidden; padding keeps the first/last card clear of the edges. */}
+      <DragScroller className="mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-p-6 px-6 py-10 [&::-webkit-scrollbar]:hidden md:mt-12 md:gap-12 md:scroll-p-10 md:px-10">
+        {BAKES.map((b, i) => (
+          <Polaroid key={b.src} bake={b} i={i} />
+        ))}
+      </DragScroller>
       <img
               src="/dividers/mask-top-slider.png"
               alt=""

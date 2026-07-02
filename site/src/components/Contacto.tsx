@@ -49,7 +49,7 @@ export default function Contacto() {
       <Sprig className="pointer-events-none absolute left-6 top-20 hidden w-44 text-cream/10 md:block" />
       <Sprig className="pointer-events-none absolute right-6 bottom-24 hidden w-44 -scale-x-100 text-cream/10 md:block" />
 
-      <div className="relative mx-auto max-w-5xl px-6 py-28 text-center">
+      <div className="relative mx-auto max-w-5xl px-6 py-42 text-center">
         <Reveal>
           <Image
             src="/brand/kiwi.svg"

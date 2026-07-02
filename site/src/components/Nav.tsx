@@ -31,8 +31,22 @@ export default function Nav() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <a href="#inicio" className="flex items-center gap-2" aria-label="Dulce Kiwi — inicio">
-          <Image src="/brand/kiwi.svg" alt="" width={44} height={36} className="h-8 w-auto" />
-          <span className="font-display text-xl text-forest">Dulce Kiwi</span>
+          <Image
+            src="/brand/kiwi.svg"
+            alt=""
+            width={44}
+            height={36}
+            className={`h-8 w-auto transition-[filter] duration-300 ${
+              scrolled ? "" : "brightness-0 invert drop-shadow-[0_1px_6px_rgba(24,14,4,0.5)]"
+            }`}
+          />
+          <span
+            className={`font-display text-xl transition-colors duration-300 ${
+              scrolled ? "text-forest" : "text-white drop-shadow-[0_1px_6px_rgba(24,14,4,0.5)]"
+            }`}
+          >
+            Dulce Kiwi
+          </span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -40,7 +54,11 @@ export default function Nav() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm uppercase tracking-[0.18em] text-forest/80 transition-colors hover:text-forest"
+                className={`text-sm uppercase tracking-[0.18em] transition-colors ${
+                  scrolled
+                    ? "text-forest/80 hover:text-forest"
+                    : "text-white/90 drop-shadow-[0_1px_6px_rgba(24,14,4,0.5)] hover:text-white"
+                }`}
               >
                 {l.label}
               </a>
@@ -50,14 +68,19 @@ export default function Nav() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="text-forest md:hidden"
+          className="md:hidden"
           aria-label="Abrir menú"
           aria-expanded={open}
         >
           <div className="space-y-1.5">
-            <span className="block h-0.5 w-6 bg-forest" />
-            <span className="block h-0.5 w-6 bg-forest" />
-            <span className="block h-0.5 w-6 bg-forest" />
+            {[0, 1, 2].map((i) => (
+              <span
+                key={i}
+                className={`block h-0.5 w-6 transition-colors duration-300 ${
+                  scrolled ? "bg-forest" : "bg-white"
+                }`}
+              />
+            ))}
           </div>
         </button>
       </nav>

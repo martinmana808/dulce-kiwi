@@ -12,12 +12,7 @@ export default function Home() {
       <Reposteria />
       
       <SobreMi />
-      <img
-        src="/dividers/mask-top-slider.png"
-        alt=""
-        aria-hidden
-        className="section-divider"
-      />
+      
       <Contacto />
     </main>
   );
